@@ -1,5 +1,7 @@
 <?php
 
+use App\Livewire\Categories;
+use App\Livewire\Posts;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,8 @@ Route::middleware([
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
+    //Categories
+    Route::get('categories', Categories::class)->name('misCategorias');
+    //Posts
+    Route::get('posts', Posts::class)->name('misPosts');
 });
